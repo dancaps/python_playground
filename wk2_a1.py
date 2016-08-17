@@ -24,7 +24,7 @@ def is_prime(n):
 
     Returns:
         bool: Returns True if the number is prime or False if it's not.
-1
+
     """
 
     if n < 2:
