@@ -29,7 +29,7 @@ def is_prime(n):
 
     if n < 2:
         return False
-    for i in xrange(2, n):
+    for i in range(2, n):
         if n % i == 0:
             return False
     return True
@@ -40,7 +40,7 @@ while True:
     print("Enter the number of the program you would like to run.")
     print("1 - Check whether a number is even or odd")
     print("2 - Check if a number is a prime number")
-    selection = input("Make selection:\n")
+    selection = int(input("Make selection:\n"))
 
     #this code uses the is_even function to tell the user if the number is even or odd
     if selection == 1:
