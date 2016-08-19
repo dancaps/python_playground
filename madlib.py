@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# week 2 assignment 2 :: madlibs
 
 
 sample_dict = {"verb1" : "BANISH", "noun1" : "PENCIL", "adjective1" : "INSTITUTIONAL",
@@ -23,12 +25,20 @@ sample_text = "1. You shall not {verb1} any other {noun1}.\n" \
 #                   noun3 = sample_dict["noun3"])
 
 while True:
-    sample_run = input("Would you like to see the sample madlib? y for YES or n for NO or q to QUIT")
+    sample_run = input("Would you like to see the sample madlib? y for YES or n for NO or q to QUIT\n")
 
     if sample_run == "y":
-        print("These are the sample words:")
-        for key, value in sample_dict.iteritems():
-            print(key, value)
+        print("These are the sample words:\n")
+        for key, value in sample_dict.items():
+            print(key[:-1], value)
+        print("")
+        print("#" * 75, "\n")
+        print(sample_text.format(verb1 = sample_dict["verb1"], noun1 = sample_dict["noun1"],
+                                  adjective1 = sample_dict["adjective1"], gov_pos1 = sample_dict["gov_pos1"],
+                                  holiday1 = sample_dict["holiday1"], occupation1 = sample_dict["occupation1"],
+                                  verb2 = sample_dict["verb2"], crime1 = sample_dict["crime1"],
+                                  verb3 = sample_dict["verb3"], adjective2 = sample_dict["adjective2"],
+                                  noun2 = sample_dict["noun2"], noun3 = sample_dict["noun3"]))
     elif sample_run == "n":
         pass
     elif sample_run == "q":
