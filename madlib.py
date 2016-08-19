@@ -16,7 +16,7 @@ sample_dict = {"verb1" : "BANISH",
                "noun3": "LASER GUN"}
 
 def make_madlib(madlib_dict):
-    """this function takes a properly formatted dictionary as input and prints
+    """this function takes a properly formatted dictionary as input and prints the madlib
 
     Args:
         madlib_dict (dict): it must contain the following keys
@@ -49,10 +49,10 @@ def make_madlib(madlib_dict):
              "10. You shall not covet thy neighbor`s {noun3}.\n"
 
     print("These are the words you've selected:\n")
-    for key, value in madlib_dict.items():  # prints the dict in human readable so the user can see the data
+    for key, value in madlib_dict.items():  #prints the dict in human readable format so the user can see the data
         print(key[:-1], value)
     print("")
-    print("#" * 75, "\n")  # created a line to seperate the text
+    print("#" * 75, "\n")  #created a line to seperate the text
     print(madlib.format(verb1=madlib_dict["verb1"],
                         noun1=madlib_dict["noun1"],
                         adjective1=madlib_dict["adjective1"],
@@ -68,7 +68,7 @@ def make_madlib(madlib_dict):
 
 #main
 while True:
-    #prompts the user to find out if the want to use the provided sample or add their own words
+    #prompts the user to find out if they want to use the provided sample or add their own words
     sample_run = input("Would you like to see the sample madlib or add your own words?\n"
                        "y to use the sample madlib\n"
                        "n to add your own words\n"
@@ -79,8 +79,8 @@ while True:
 
     elif sample_run == "n":  #if the user selects no this code will run
         a_an = ''  #allows for proper grammar when prompting the user
-        vowel = ["a", "e", "i", "o", "u"]  #used
-        user_dict = {}  #empty dict that will be populated by the user input
+        vowel = ["a", "e", "i", "o", "u"]  #used to see if there the word starts with a vowel
+        user_dict = {}  #empty dict that will be populated by user input
         user_list = list(sample_dict)  #this creates a list of the keys from the sample dict
         print("You will be prompted to enter the required words")
         for i in user_list:  #this iterates though the new list and uses the element names to populate the new dict
