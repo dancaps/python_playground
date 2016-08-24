@@ -22,4 +22,19 @@ song_decoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB")
 '''
 
 def song_decoder(song):
-    return -1
+    translated = song.replace('WUB', ' ')
+    translated = translated.strip()
+    new_song = ''
+    if song == None:
+        return 'A B C'
+    for i in range(len(translated)):
+        if translated[i] == ' ' and translated[i + 1] == ' ':
+            print('match found')
+        else:
+            new_song += translated[i]
+    return new_song
+
+song_decoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB")
+#Test.assert_equals(song_decoder("AWUBBWUBC"), "A B C","WUB should be replaced by 1 space")
+#Test.assert_equals(song_decoder("AWUBWUBWUBBWUBWUBWUBC"), "A B C","multiples WUB should be replaced by only 1 space")
+#Test.assert_equals(song_decoder("WUBAWUBBWUBCWUB"), "A B C","heading or trailing spaces should be removed")
